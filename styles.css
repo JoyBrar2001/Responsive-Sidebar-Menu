@@ -305,11 +305,13 @@ body.light .nav-link .nav-icon-right .toggle-switch .switch::before{
 
 body.light{
     --text-color: rgba(0,0,0,0.5);
-    --bg-color: rgba(255,255,255,0.6);
+    --bg-color: rgba(255,255,255,0.7);
     --light-grey-color: rgba(0,0,0,0.3);
-    --bg-hover-color: rgba(0,0,0,0.0.5);
+    --bg-hover-color: rgba(0,0,0,0.0.05);
     --light-green-color: rgba(88,190,147);
-    --dark-grey-color: rgba(0,0,0,0.0.08);
+    --dark-grey-color: rgba(255,255,255,0.4);
     --extra-grey-color: rgba(0,0,0,0.12);
     --link-bar-color: #ff605c;
+
+    background: url('img/bg_light.jpg') center no-repeat;
 }
