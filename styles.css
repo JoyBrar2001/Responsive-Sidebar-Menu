@@ -19,7 +19,7 @@
     --bg-hover-color: rgba(255,255,255,0.1);
     --dark-grey-color: rgba(0,0,0,0.2);
     --extra-grey-color: rgba(0,0,0,0.3);
-    --link-bar-color: ##ff605c;
+    --link-bar-color: #ff605c;
 
     /* Transition */
     --tran-05: all 0.5s ease;
@@ -287,4 +287,29 @@ body{
     left: 3px;
     transform: translateY(-50%);
     transition: var(--tran-05);
+}
+
+/* Light Mode */
+
+body.light .nav-link .nav-icon-left .moon-sun .fa-moon{
+    opacity: 1;
+}
+
+body.light .nav-link .nav-icon-left .moon-sun .fa-sun{
+    opacity: 0;
+}
+
+body.light .nav-link .nav-icon-right .toggle-switch .switch::before{
+    left: 22px;
+}
+
+body.light{
+    --text-color: rgba(0,0,0,0.5);
+    --bg-color: rgba(255,255,255,0.6);
+    --light-grey-color: rgba(0,0,0,0.3);
+    --bg-hover-color: rgba(0,0,0,0.0.5);
+    --light-green-color: rgba(88,190,147);
+    --dark-grey-color: rgba(0,0,0,0.0.08);
+    --extra-grey-color: rgba(0,0,0,0.12);
+    --link-bar-color: #ff605c;
 }
