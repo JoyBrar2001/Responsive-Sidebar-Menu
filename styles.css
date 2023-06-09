@@ -10,14 +10,20 @@
 }
 
 :root{
+
     /* Color */
     --text-color: rgba(255,255,255,0.5);
     --bg-color: rgba(0,0,0,0.6);
     --light-grey-color: rgba(255,255,255,0.2);
     --light-green-color: rgba(88,190,147);
     --bg-hover-color: rgba(255,255,255,0.1);
+    --dark-grey-color: rgba(0,0,0,0.2);
+    --extra-grey-color: rgba(0,0,0,0.3);
+    --link-bar-color: ##ff605c;
+
     /* Transition */
     --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
 }
 
 body{
@@ -42,7 +48,7 @@ body{
 }
 
 .sidebar:hover{
-    width: 240px;
+    width: 280px;
 }
 
 .btn{
@@ -195,4 +201,90 @@ body{
 
 .nav-icon-right{
     color: var(--light-green-color);
+}
+
+.nav-search{
+    background: var(--dark-grey-color);
+}
+
+.nav-search input{
+    color: var(--text-color);
+    width: 100%;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.nav-search:hover{
+    background: var(--extra-grey-color);
+}
+
+.nav-search input::placeholder{
+    font-style: italic;
+}
+
+.link-bar{
+    width: 6px;
+    height: 50px;
+    background: var(--link-bar-color);
+    position: absolute;
+    left: -20px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 3px;
+    opacity: 0;
+    transition: var(--tran-03);
+}
+
+.nav-link:hover .link-bar{
+    opacity: 1;
+}
+
+.settings .menu-links{
+    background: var(--dark-grey-color);
+    border-radius: 10px;
+}
+
+.nav-link .nav-icon-left .moon-sun{
+    height: 50px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link .nav-icon-left .moon-sun i{
+    position: absolute;
+}
+
+.nav-link .nav-icon-left .moon-sun .fa-moon{
+    opacity: 0;
+}
+
+.nav-link .nav-icon-right .toggle-switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-width: 68px;
+}
+
+.nav-link .nav-icon-right .toggle-switch .switch{
+    position: relative;
+    height: 20px;
+    width: 40px;
+    border: 2px solid var(--light-green-color);
+    border-radius: 100px;
+}
+
+.nav-link .nav-icon-right .toggle-switch .switch::before{
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: var(--light-green-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: var(--tran-05);
 }
